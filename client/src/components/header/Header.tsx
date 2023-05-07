@@ -1,4 +1,3 @@
-import logo from "../../assets/GYMSHOP.png";
 import { ReactNode, useState, useEffect } from "react";
 import "./header.style.scss";
 

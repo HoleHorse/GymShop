@@ -7,8 +7,13 @@ import collage from "../../assets/gym-collage.png";
 import "./home.style.scss";
 import Question from "./faq/Question";
 import Footer from "../../components/footer/Footer";
+import { SetStateAction, useState } from "react";
 
 function Home() {
+  const [email, setEmail] = useState("");
+  const onEmailChange = (event: { target: { value: SetStateAction<string>; }; }) => {
+    setEmail(event.target.value);
+  };
   return (
     <>
       <Header>
@@ -26,12 +31,16 @@ function Home() {
           <div className="columns is-mobile is-multiline is-centered">
             <div className="field center">
               <div className="column is-narrow">
-                <input
-                  className="input"
-                  type="email"
-                  placeholder="Email Address"
-                  style={{ minWidth: "275px" }}
-                />
+                <form className="form">
+                  <input
+                    className="input has-value"
+                    type="email"
+                    value={email}
+                    onChange={onEmailChange}
+                    style={{ minWidth: "275px" }}
+                  />
+                  <label className={`placeholder${email === "" ? "" : "-floating"}`}>Email Address</label>
+                </form>
               </div>
               <div className="column is-narrow">
                 <SignUpBtn />
@@ -88,7 +97,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="container is-fluid" style={{paddingBottom: 24}}>
+      <div className="container is-fluid" style={{ paddingBottom: 24 }}>
         <div className="column">
           <p id="faq" className="main-text mt-5">
             Frequently Asked Questions
