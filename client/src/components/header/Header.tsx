@@ -34,10 +34,11 @@ function Header({ children }: Props) {
       className="navbar is-black"
       role="navigation"
       aria-label="main navigation"
+      style={{backgroundColor: "black"}}
     >
       <div className="navbar-brand">
-        <a className="navbar-item" href="/" style={{paddingLeft: 12}}>
-          <img src={logo} width={115} alt="GYMSHOP" />
+        <a className="navbar-item" href="/" style={{ paddingLeft: 12 }}>
+          <p id="logo">GYMSHOP</p>
         </a>
 
         <button
@@ -53,11 +54,16 @@ function Header({ children }: Props) {
       </div>
       <div className={`navbar-menu${isActive}`}>
         <div className="navbar-start">
-          <a href="/" className="navbar-item">
+          <a id="red" href="/" className="navbar-item">
             Home
           </a>
+          <a id="red" href="#faq" className="navbar-item">
+            FAQ
+          </a>
           <div className="navbar-item has-dropdown is-hoverable">
-            <p className="navbar-link">Cotologue</p>
+            <p id="red" className="navbar-link">
+              Cotologue
+            </p>
             <div className="navbar-dropdown">
               <a className="navbar-item" href="/shop/weights">
                 Weights
