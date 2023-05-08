@@ -1,6 +1,5 @@
-import LoginBtn from "../../components/buttons/LoginBtn";
+import RedBtn from "../../components/buttons/RedBtn";
 import Header from "../../components/header/Header";
-import SignUpBtn from "../../components/buttons/SignUpBtn";
 import smile from "../../assets/smile.jpg";
 import supplements from "../../assets/supplements.jpg";
 import collage from "../../assets/gym-collage.png";
@@ -8,16 +7,19 @@ import "./home.style.scss";
 import Question from "./faq/Question";
 import Footer from "../../components/footer/Footer";
 import { SetStateAction, useState } from "react";
+import Input from "../../components/input/Input";
 
 function Home() {
   const [email, setEmail] = useState("");
-  const onEmailChange = (event: { target: { value: SetStateAction<string>; }; }) => {
+  const onEmailChange = (event: {
+    target: { value: SetStateAction<string> };
+  }) => {
     setEmail(event.target.value);
   };
   return (
     <>
       <Header>
-        <LoginBtn />
+        <RedBtn text="Log In" href="/login" />
       </Header>
       <div className="background-container" style={{ padding: 12 + "%" }}>
         <div className="main-content">
@@ -31,19 +33,15 @@ function Home() {
           <div className="columns is-mobile is-multiline is-centered">
             <div className="field center">
               <div className="column is-narrow">
-                <form className="form">
-                  <input
-                    className="input has-value"
-                    type="email"
-                    value={email}
-                    onChange={onEmailChange}
-                    style={{ minWidth: "275px" }}
-                  />
-                  <label className={`placeholder${email === "" ? "" : "-floating"}`}>Email Address</label>
-                </form>
+                <Input
+                  value={email}
+                  onValueChange={onEmailChange}
+                  type="email"
+                  placeholder="Email Address"
+                />
               </div>
               <div className="column is-narrow">
-                <SignUpBtn />
+                <RedBtn text="Get Started" href="/register" />
               </div>
             </div>
           </div>

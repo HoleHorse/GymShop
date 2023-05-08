@@ -3,6 +3,7 @@ import linkedin from "../../assets/linkedin.svg";
 import youtube from "../../assets/movie.svg";
 import twitter from "../../assets/connection.svg";
 import facebook from "../../assets/connection-85.svg";
+import "./footer.style.scss"
 
 function Footer() {
   return (

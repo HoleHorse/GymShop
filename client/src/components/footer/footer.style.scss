@@ -1,0 +1,32 @@
+.footer {
+  background-color: black;
+  img {
+    width: 60px;
+    margin: 0px 0.3em;
+  }
+  img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  a {
+    margin: 5px 0.5em;
+    color: white;
+  }
+  a:hover {
+    color: #db202c;
+  }
+  #gymshop:hover {
+    color: #db202c;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    a {
+      font-size: 16px;
+    }
+    img {
+      width: 40px;
+    }
+  }
+}

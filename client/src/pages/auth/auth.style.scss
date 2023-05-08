@@ -1,0 +1,36 @@
+.auth-form {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.705);
+  min-width: 300px;
+  max-width: 400px;
+  width: 30vw;
+  height: 500px;
+  border: #2b2b2b 1px solid;
+
+  p {
+    font-size: 20px;
+  }
+
+  a {
+    color: #db202c;
+    font-size: inherit;
+  }
+
+  a:hover {
+    color: #660000;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .auth-form {
+    p {
+        font-size: 18px;
+    }
+  }
+}
