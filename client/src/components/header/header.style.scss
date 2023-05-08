@@ -17,7 +17,7 @@ $red: #db202c;
   }
   a.navbar-item:hover {
     color: $red;
-    background-color: #1f1f1f;
+    background-color: #0f0f0f;
   }
   p.navbar-link:hover {
     color: white;
@@ -37,7 +37,7 @@ $red: #db202c;
   }
   .navbar.is-black .navbar-start > a.navbar-item:hover {
     color: $red;
-    background-color: #1f1f1f;
+    background-color: #0f0f0f;
   }
   .navbar-dropdown {
     background-color: #000;
@@ -45,7 +45,7 @@ $red: #db202c;
     border: none;
   }
   .navbar-dropdown a.navbar-item:hover {
-    background-color: #1f1f1f;
+    background-color: #0f0f0f;
     color: $red;
   }
   .navbar-dropdown a.navbar-item {

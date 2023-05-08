@@ -24,7 +24,7 @@ function Footer() {
           <a href="/cookies">Cookies</a>
         </p>
       </div>
-      <p>
+      <p className="copyright">
         &#xA9; 2023 <span id="gymshop">GYMSHOP</span>
       </p>
     </footer>

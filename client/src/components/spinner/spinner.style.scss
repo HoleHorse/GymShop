@@ -1,0 +1,21 @@
+.spinner {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -32px;
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #db202c transparent #db202c transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,5 +1,6 @@
 .footer {
   background-color: black;
+  padding-bottom: 48px;
   img {
     width: 60px;
     margin: 0px 0.3em;
@@ -20,13 +21,16 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .footer {
     a {
       font-size: 16px;
     }
     img {
       width: 40px;
+    }
+    .copyright, #gymshop {
+      font-size: 18px;
     }
   }
 }
