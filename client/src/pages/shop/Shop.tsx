@@ -3,7 +3,7 @@ import Spinner from "../../components/spinner/Spinner";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import RedBtn from "../../components/buttons/RedBtn";
-import PopularProducts from "./popularitems/PopularItems";
+import ItemsHorizontal from "./popularitems/ItemsHorizontal";
 import "./shop.style.scss"
 
 function Shop() {
@@ -101,8 +101,8 @@ function Shop() {
       <Header>
         <RedBtn text="Logout" href="/logout" />
       </Header>
-      <PopularProducts data={data} title="Popular products"/>
-      <PopularProducts data={data} title="New products"/>
+      <ItemsHorizontal data={data} title="Popular products"/>
+      <ItemsHorizontal data={data} title="New products"/>
       <Footer />
     </>
   );
