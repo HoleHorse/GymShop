@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import leftArrow from "../../../assets/left-arrow.svg";
 import rightArrow from "../../../assets/right-arrow.svg";
 import ItemCard from "../../../components/cards/ItemCard";
-import { Item } from "../../../models/Item";
+import { Item } from "../../../models/models";
 
 type Title = {
   data: Item[];
@@ -11,7 +11,7 @@ type Title = {
 
 function PopularProducts({ title, data }: Title) {
   const listRef = useRef<HTMLDivElement>(null);
-  const [seeArrows, setSeeArrows] = useState("none")
+  const [seeArrows, setSeeArrows] = useState("none");
 
   const scrollTo = (x: number) => {
     if (listRef.current) {
@@ -24,22 +24,31 @@ function PopularProducts({ title, data }: Title) {
 
   return (
     <div className="section-products">
-      <h1 className="section-title" style={{ paddingBottom: 1 + "%", paddingTop: 1 + "%" }}>{title}</h1>
-      <div className="container-arrows is-fluid" onMouseEnter={() => setSeeArrows("block")} onMouseLeave={() => setSeeArrows("none")}>
+      <h1
+        className="section-title"
+        style={{ paddingBottom: 1 + "%", paddingTop: 1 + "%" }}
+      >
+        {title}
+      </h1>
+      <div
+        className="container-arrows is-fluid"
+        onMouseEnter={() => setSeeArrows("block")}
+        onMouseLeave={() => setSeeArrows("none")}
+      >
         <div className="arrows-container">
           <img
             className="arrow arrow-left"
             src={leftArrow}
             alt="Left Arrow"
             onClick={() => scrollTo(-1000)}
-            style={{display: seeArrows}}
+            style={{ display: seeArrows }}
           />
           <img
             className="arrow arrow-right"
             src={rightArrow}
             alt="Right Arrow"
             onClick={() => scrollTo(+1000)}
-            style={{display: seeArrows}}
+            style={{ display: seeArrows }}
           />
         </div>
         <div

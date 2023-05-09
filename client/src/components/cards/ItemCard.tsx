@@ -1,4 +1,4 @@
-import { ItemProp } from "../../models/Item";
+import { ItemProp } from "../../models/models";
 
 function ItemCard({ item }: ItemProp) {
   return (
