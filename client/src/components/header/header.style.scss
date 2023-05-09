@@ -9,15 +9,17 @@ $red: #db202c;
   a.navbar-item {
     color: white;
     padding-left: 16px;
+    font-size: 20px;
   }
   p.navbar-link {
     color: white;
     padding-left: 16px;
     cursor: default;
+    font-size: 20px;
   }
   a.navbar-item:hover {
     color: $red;
-    background-color: #0f0f0f;
+    background-color: #2a2a2a;
   }
   p.navbar-link:hover {
     color: white;
@@ -37,7 +39,7 @@ $red: #db202c;
   }
   .navbar.is-black .navbar-start > a.navbar-item:hover {
     color: $red;
-    background-color: #0f0f0f;
+    background-color: #2a2a2a;
   }
   .navbar-dropdown {
     background-color: #000;
@@ -45,7 +47,7 @@ $red: #db202c;
     border: none;
   }
   .navbar-dropdown a.navbar-item:hover {
-    background-color: #0f0f0f;
+    background-color: #2a2a2a;
     color: $red;
   }
   .navbar-dropdown a.navbar-item {

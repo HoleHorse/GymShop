@@ -1,9 +1,9 @@
-import { Item } from "../../models/Item";
+import { ItemProp } from "../../models/Item";
 
-function ItemCard({ item }: Item) {
+function ItemCard({ item }: ItemProp) {
   return (
     <div
-      className="column is-2-desktop is-3-tablet is-6-mobile"
+      className="column is-2-desktop is-4-tablet is-6-mobile"
       style={{ paddingLeft: 0 }}
     >
       <div className="card">
@@ -12,9 +12,13 @@ function ItemCard({ item }: Item) {
             <img alt="Product" src={item.img} />
           </figure>
         </div>
-        <div className="card-content is-overlay">
-          <h3 className="m-0 has-text-white">{item.title}</h3>
-          <h3 className="m-0 has-text-white">{item.price}</h3>
+        <div className="card-content">
+          <div className="media">
+            <div className="media-content">
+              <p className="card-text">{item.title}</p>
+              <p className="card-text">{item.price} KZT</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

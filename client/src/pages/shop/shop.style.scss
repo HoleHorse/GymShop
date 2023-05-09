@@ -1,25 +1,105 @@
-.popular-products {
+.section-products {
   background-color: #0f0f0f;
-  h1 {
+  .section-title {
     margin-left: 12px;
     color: white;
     font-size: 32px;
   }
-  .container {
-    height: 500px;
-    overflow: auto;
-    white-space: nowrap;
-  }
-  .container::-webkit-scrollbar {
-    width: 0;
-  }
   .card {
     border-radius: 0;
+    color: white;
+    z-index: 1;
   }
   .card-content {
     border-radius: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 40%;
-    top: 60%;
+    background-color: #2a2a2a;
+    padding: 8% 8%;
+  }
+  .card-text {
+    white-space: nowrap;
+    font-size: 5vw;
+  }
+  @media screen and (min-width: 769px) {
+    .card-text {
+      font-size: 3vw;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .card-text {
+      font-size: 1.5vw;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .section-title {
+      font-size: 24px;
+    }
+  }
+}
+
+.container-arrows {
+  position: relative;
+  border-bottom: none;
+  padding: 0% 0%;
+}
+
+.container-slider {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.container-slider::-webkit-scrollbar {
+  width: 0;
+}
+
+.arrows-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-45%);
+  background-color: #0f0f0f;
+  padding: 1% 0%;
+}
+
+.arrow-left {
+  left: 0;
+  z-index: 2;
+  width: 32px;
+  margin: 0px 0.5%
+}
+
+.arrow-right {
+  right: 0;
+  z-index: 2;
+  width: 32px;
+  margin: 0px 0.5%
+}
+
+@media screen and (min-width: 768px) {
+  .arrow-left {
+    width: 48px;
+  }
+  .arrow-right {
+    width: 48px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .arrow-left {
+    display: none;
+  }
+  .arrow-right {
+    display: none;
   }
 }
