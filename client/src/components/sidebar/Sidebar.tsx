@@ -1,16 +1,18 @@
 import { useState } from "react";
 import "./sidebar.style.scss";
 import arrow from "../../assets/right-arrow.svg";
+import mglass from "../../assets/lupa.svg"
 
 function Sidebar() {
   const [sidebar, setSidebar] = useState("");
   function openSidebar() {
     if (sidebar === "") {
-      setSidebar("-open");
+      setSidebar("-closed");
     } else {
       setSidebar("");
     }
   }
+
   return (
     <div className={`sidebar${sidebar}`}>
       <img
@@ -20,8 +22,10 @@ function Sidebar() {
         onClick={openSidebar}
       />
       <div className="content">
-        <input type="text" placeholder="Search" />
-        <button className="button">Search</button>
+        <div className="search">
+          <input className="input" type="text" placeholder="Search" />
+          <button className="button is-danger"><img src={mglass}/></button>
+        </div>
         <ul>
           <li>List items</li>
           <li>List items</li>

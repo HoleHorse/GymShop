@@ -40,23 +40,23 @@ function PopularProducts({ title, data }: Props) {
             className="arrow arrow-left"
             src={leftArrow}
             alt="Left Arrow"
-            onClick={() => scrollTo(-1000)}
+            onClick={() => scrollTo(-500)}
             style={{ display: seeArrows }}
           />
           <img
             className="arrow arrow-right"
             src={rightArrow}
             alt="Right Arrow"
-            onClick={() => scrollTo(+1000)}
+            onClick={() => scrollTo(+500)}
             style={{ display: seeArrows }}
           />
         </div>
         <div
           className="container-slider is-fluid"
           ref={listRef}
-          style={{ padding: 0, borderBottom: "none" }}
+          style={{ borderBottom: "none" }}
         >
-          <div className="columns" style={{ marginLeft: 12 }}>
+          <div className="columns" style={{ marginLeft: 12, width: 80+"%" }}>
             {data.map((item) => {
               return <ItemCard item={item} key={item.id} />;
             })}

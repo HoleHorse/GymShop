@@ -1,22 +1,6 @@
 .sidebar {
-  height: 100%;
-  width: 25%;
-  background-color: #2a2a2a;
-  padding: 20px;
-  .toggle-btn {
-    padding: 10%;
-    display: none;
-  }
-  .content {
-    color: white;
-    font-size: 18px;
-  }
-}
-
-.sidebar-open {
   position: absolute;
   z-index: 2;
-  width: 300px;
   background-color: #2a2a2a;
   padding: 20px;
   height: 100%;
@@ -25,7 +9,7 @@
     rotate: 180deg;
     position: absolute;
     width: 32px;
-    left: 264px
+    right: 16px;
   }
   .content {
     color: white;
@@ -33,20 +17,46 @@
   }
 }
 
+.sidebar-closed {
+  width: 40px;
+  background-color: #2a2a2a;
+  .toggle-btn {
+    display: block;
+    width: 32px;
+    margin: 10%;
+    align-self: center;
+  }
+  .content {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    position: relative;
+    width: 360px;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .sidebar {
-    width: 10%;
-    padding: 0;
-    .toggle-btn {
-      display: block;
-    }
-    .content {
-      display: none;
-    }
+    width: 100%;
   }
-  .sidebar-open {
-    .toggle-btn {
-        display: none;
-    }
+}
+
+.search {
+  display: flex;
+  button {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  input {
+    height: inherit;
+    border-color: transparent;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  input::placeholder {
+    color: #707070;
   }
 }

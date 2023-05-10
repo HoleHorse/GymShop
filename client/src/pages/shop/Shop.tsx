@@ -25,27 +25,9 @@ function Shop() {
         <div style={{ paddingBottom: 60 + "vh" }}>
           <Spinner />
         </div>
+        <div style={{ padding: "5vh" }}></div>
         <Footer />
       </div>
-    );
-  }
-  if (window.location.pathname === "/shop/all") {
-    return (
-      <>
-        <Header>
-          <RedBtn text="Logout" href="/logout" />
-        </Header>
-        <div
-          className="container is-fluid"
-          style={{ display: "flex", padding: 0 }}
-        >
-          <div style={{display: "flex", width: 100 + "%"}}>
-            <Sidebar />
-            <ItemsGrid data={data} />
-          </div>
-        </div>
-        <Footer />
-      </>
     );
   }
   return (
@@ -53,8 +35,23 @@ function Shop() {
       <Header>
         <RedBtn text="Logout" href="/logout" />
       </Header>
-      <ItemsHorizontal data={data} title="Popular products" />
-      <ItemsHorizontal data={data} title="New products" />
+      {window.location.pathname === "/shop/all" ? (
+        <div
+          className="container is-fluid"
+          style={{ display: "flex", padding: 0 }}
+        >
+          <div style={{ display: "flex", width: 100 + "%" }}>
+            <Sidebar />
+            <ItemsGrid data={data} />
+          </div>
+        </div>
+      ) : (
+        <>
+          <ItemsHorizontal data={data} title="Popular products" />
+          <ItemsHorizontal data={data} title="New products" />
+        </>
+      )}
+
       <Footer />
     </>
   );
