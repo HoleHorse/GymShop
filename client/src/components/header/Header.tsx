@@ -33,12 +33,12 @@ function Header({ children }: Props) {
       className="navbar is-black"
       role="navigation"
       aria-label="main navigation"
-      style={{backgroundColor: "black"}}
+      style={{ backgroundColor: "black" }}
     >
       <div className="navbar-brand">
-        <a className="navbar-item" href="/" style={{ paddingLeft: 12 }}>
+        <span className="navbar-item" style={{ paddingLeft: 12 }}>
           <p id="logo">GYMSHOP</p>
-        </a>
+        </span>
 
         <button
           onClick={onBurgerClick}
@@ -59,6 +59,9 @@ function Header({ children }: Props) {
           <a id="red" href="#faq" className="navbar-item">
             FAQ
           </a>
+          <a id="red" href="/shop" className="navbar-item">
+            Shop
+          </a>
           <div className="navbar-item has-dropdown is-hoverable">
             <p id="red" className="navbar-link">
               Cotologue
@@ -73,7 +76,7 @@ function Header({ children }: Props) {
               <a className="navbar-item" href="/shop/supplements">
                 Supplements
               </a>
-              <a className="navbar-item" href="/shop">
+              <a className="navbar-item" href="/shop/all">
                 See all
               </a>
             </div>

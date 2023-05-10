@@ -4,12 +4,12 @@ import rightArrow from "../../../assets/right-arrow.svg";
 import ItemCard from "../../../components/cards/ItemCard";
 import { Item } from "../../../models/models";
 
-type Title = {
+type Props = {
   data: Item[];
   title: string;
 };
 
-function PopularProducts({ title, data }: Title) {
+function PopularProducts({ title, data }: Props) {
   const listRef = useRef<HTMLDivElement>(null);
   const [seeArrows, setSeeArrows] = useState("none");
 

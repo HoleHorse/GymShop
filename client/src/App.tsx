@@ -7,12 +7,12 @@ import Shop from "./pages/shop/Shop";
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/login" element={<Login />}/>
-      <Route path="/register" element={<Register />}/>
-      <Route path="/shop" element={<Shop />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/shop/*" element={<Shop />} />
+      </Routes>
     </BrowserRouter>
   );
 }

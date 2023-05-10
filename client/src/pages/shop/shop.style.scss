@@ -1,6 +1,9 @@
 .section-products {
   background-color: #0f0f0f;
   padding-bottom: 24px;
+  .container {
+    border-bottom: none;
+  }
   .section-title {
     margin-left: 12px;
     color: white;
