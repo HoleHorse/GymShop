@@ -17,6 +17,9 @@ function Pagination() {
           </a>
         </li>
         <li>
+          <span className="pagination-ellipsis">&hellip;</span>
+        </li>
+        <li>
           <a className="pagination-link" aria-label="Goto page 45">
             45
           </a>
@@ -34,6 +37,9 @@ function Pagination() {
           <a className="pagination-link" aria-label="Goto page 47">
             47
           </a>
+        </li>
+        <li>
+          <span className="pagination-ellipsis">&hellip;</span>
         </li>
         <li>
           <a className="pagination-link" aria-label="Goto page 86">
