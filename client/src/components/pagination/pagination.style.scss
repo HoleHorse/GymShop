@@ -23,6 +23,18 @@
   .pagination-ellipsis {
     display: none;
   }
+  .pagination-link:hover {
+    background-color: #db202c;
+    border-color: #db202c;
+  }
+  .pagination-previous:hover {
+    background-color: #db202c;
+    border-color: #db202c;
+  }
+  .pagination-next:hover {
+    background-color: #db202c;
+    border-color: #db202c;
+  }
   @media screen and (min-width: 389px) {
     .pagination-ellipsis {
       display: block;

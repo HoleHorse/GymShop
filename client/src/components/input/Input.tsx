@@ -15,7 +15,7 @@ function Input({ value, onValueChange, type, placeholder }: InputProps) {
         type={type}
         value={value}
         onChange={onValueChange}
-        style={{ minWidth: "255px" }}
+        style={{ minWidth: "255px", height: 46 }}
       />
       <label className={`placeholder${value === "" ? "" : "-floating"}`}>
         {placeholder}

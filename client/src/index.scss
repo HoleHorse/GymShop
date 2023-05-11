@@ -110,6 +110,9 @@ body {
     border-color: #202020;
     color: white;
     height: 3rem;
+    option {
+      background-color: #202020;
+    }
   }
   select:focus,
   select:focus-visible,
