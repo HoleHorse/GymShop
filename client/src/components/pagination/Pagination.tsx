@@ -1,8 +1,13 @@
-import "./pagination.style.scss"
+import "./pagination.style.scss";
 
 function Pagination() {
   return (
-    <nav className="pagination" role="navigation" aria-label="pagination" style={{paddingLeft: 20, paddingRight: 32}}>
+    <nav
+      className="pagination"
+      role="navigation"
+      aria-label="pagination"
+      style={{ paddingLeft: 20, paddingRight: 32 }}
+    >
       <a className="pagination-previous">Previous</a>
       <a className="pagination-next">Next page</a>
       <ul className="pagination-list">
@@ -39,4 +44,5 @@ function Pagination() {
     </nav>
   );
 }
+
 export default Pagination;
