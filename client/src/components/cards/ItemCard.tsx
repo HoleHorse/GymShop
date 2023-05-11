@@ -3,7 +3,7 @@ import { ItemProp } from "../../models/models";
 function ItemCard({ item }: ItemProp) {
   return (
     <div
-      className="column is-2-desktop is-4-tablet is-6-mobile"
+      className="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile"
       style={{ paddingLeft: 0, paddingBottom: 0 }}
     >
       <div className="card">

@@ -2,10 +2,10 @@
   position: absolute;
   z-index: 2;
   background-color: #2a2a2a;
-  padding: 20px;
+  padding: 15px;
   height: 100%;
+  min-height: 65vh;
   .toggle-btn {
-    display: block;
     rotate: 180deg;
     position: absolute;
     width: 32px;
@@ -14,6 +14,15 @@
   .content {
     color: white;
     font-size: 18px;
+    .sidebar-subtitle {
+      color: white;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .sidebar-block {
+      display: flex;
+      width: 86%;
+    }
   }
 }
 
@@ -21,9 +30,9 @@
   width: 40px;
   background-color: #2a2a2a;
   .toggle-btn {
-    display: block;
     width: 32px;
     margin: 10%;
+    margin-top: 10px;
     align-self: center;
   }
   .content {
@@ -34,7 +43,14 @@
 @media screen and (min-width: 1024px) {
   .sidebar {
     position: relative;
-    width: 360px;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .sidebar {
+    position: relative;
+    width: 420px;
   }
 }
 
@@ -46,17 +62,43 @@
 
 .search {
   display: flex;
-  button {
+  max-width: 86%;
+  .button {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
   }
-  input {
-    height: inherit;
-    border-color: transparent;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+}
+
+.input {
+  height: inherit;
+  border-color: transparent;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.input::placeholder {
+  color: #707070;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.checkbox {
+  accent-color: #db202c;
+  span {
+    font-family: "book";
+    margin-left: 8px;
   }
-  input::placeholder {
-    color: #707070;
-  }
+}
+
+.checkbox:hover {
+  color: #db202c;
 }

@@ -9,6 +9,7 @@ import useFetch from "../../hooks/useFetch";
 import { Item } from "../../models/models";
 import ItemsGrid from "./lists/ItemsGrid";
 import Sidebar from "../../components/sidebar/Sidebar";
+import Pagination from "../../components/pagination/Pagination";
 
 function Shop() {
   const data: Item[] = useFetch("");
@@ -38,11 +39,14 @@ function Shop() {
       {window.location.pathname === "/shop/all" ? (
         <div
           className="container is-fluid"
-          style={{ display: "flex", padding: 0 }}
+          style={{ display: "flex", padding: 0, borderBottom: "none" }}
         >
           <div style={{ display: "flex", width: 100 + "%" }}>
             <Sidebar />
-            <ItemsGrid data={data} />
+            <div style={{ display: "flex", width: 100+"%", flexDirection: "column" }}>
+              <Pagination />
+              <ItemsGrid data={data} />
+            </div>
           </div>
         </div>
       ) : (

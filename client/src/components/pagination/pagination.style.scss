@@ -1,0 +1,27 @@
+.pagination {
+  margin-top: 12px;
+  .pagination-link.is-current {
+    background-color: #db202c;
+    border-color: #db202c;
+    color: #fff;
+  }
+  .pagination-link {
+    background-color: #2a2a2a;
+    border-color: #2a2a2a;
+    color: #fff;
+  }
+  .pagination-next {
+    color: white;
+    background-color: #2a2a2a;
+    border-color: #2a2a2a;
+  }
+  .pagination-previous {
+    color: white;
+    background-color: #2a2a2a;
+    border-color: #2a2a2a;
+  }
+}
+
+.pagination:not(:last-child) {
+    margin-bottom: 12px;
+}
