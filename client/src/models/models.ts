@@ -1,25 +1,21 @@
-export interface Model {
+export interface Model {}
+
+export class Item {
+  constructor(
+    public id: number,
+    public title: string,
+    public img: string,
+    public price: number,
+    public rating: number,
+    public comments: number[],
+    public details: string[]
+  ) {}
 }
 
-export class Item implements Model {
-  id: number;
-  title: string;
-  img: string;
-  price: number;
-  details: Details;
-  constructor(id: number, title: string, img: string, price: number, details: Details) {
-    this.id = id;
-    this.title = title;
-    this.img = img;
-    this.price = price;
-    this.details = details;
-  }
-}
-
-export type Details = {
-
+export class Comment {
+  constructor(id: number, author: string, comment: string) {}
 }
 
 export type ItemProp = {
   item: Item;
-}
+};

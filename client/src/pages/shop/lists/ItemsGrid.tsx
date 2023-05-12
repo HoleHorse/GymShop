@@ -11,7 +11,7 @@ function ItemsGrid({ data }: Props) {
       <div className="container is-fluid">
         <div className="columns is-multiline">
           {data.map((item) => {
-            return <ItemCard item={item} />;
+            return <ItemCard item={item} key={item.id} />;
           })}
         </div>
       </div>

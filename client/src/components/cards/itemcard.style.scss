@@ -1,0 +1,11 @@
+.item-card {
+  transition: all 0.2s ease-in-out;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  cursor: pointer;
+}
+
+.item-card:hover {
+  transform: scale(1.1);
+  z-index: 3;
+}
