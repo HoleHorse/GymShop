@@ -31,6 +31,19 @@ $red: #db202c;
   #logo {
     font-size: 32px;
   }
+  .navbar.is-black .navbar-end {
+    .navbar-burger {
+      display: none;
+    }
+    .navbar-link {
+      display: none;
+    }
+    .navbar-item {
+      img {
+        padding-bottom: 2px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -50,9 +63,32 @@ $red: #db202c;
   .navbar-dropdown a.navbar-item:hover {
     background-color: #2a2a2a;
     color: $red;
+    img {
+      fill: $red;
+    }
   }
   .navbar-dropdown a.navbar-item {
     color: white;
+  }
+  .navbar.is-black .navbar-end {
+    .navbar-link::after {
+      display: none;
+    }
+    .navbar-burger {
+      display: block;
+    }
+    .navbar-burger:hover {
+      color: $red;
+    }
+    .navbar-burger:focus {
+      color: $red;
+    }
+    .navbar-burger:focus-within {
+      color: $red;
+    }
+  }
+  .navbar-link:focus-within {
+    background-color: #000;
   }
 }
 

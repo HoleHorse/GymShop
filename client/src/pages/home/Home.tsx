@@ -8,6 +8,8 @@ import Question from "./faq/Question";
 import Footer from "../../components/footer/Footer";
 import { SetStateAction, useState } from "react";
 import Input from "../../components/input/Input";
+import logout from "../../assets/logout.svg";
+import NavbarLink from "../../components/header/navbar-link/NavbarLink";
 
 function Home() {
   const [email, setEmail] = useState("");
@@ -19,7 +21,7 @@ function Home() {
   return (
     <>
       <Header>
-        <RedBtn text="Log In" href="/login" />
+        <NavbarLink text="Log In" href="/login" img={logout} />
       </Header>
       <div className="background-container" style={{ padding: 12 + "%" }}>
         <div className="main-content">

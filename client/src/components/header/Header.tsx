@@ -1,5 +1,9 @@
 import { ReactNode, useState, useEffect } from "react";
 import "./header.style.scss";
+import basket from "../../assets/basket.svg";
+import order from "../../assets/order.svg";
+import help from "../../assets/help.svg";
+import NavbarLink from "./navbar-link/NavbarLink";
 
 interface Props {
   children?: ReactNode;
@@ -63,9 +67,7 @@ function Header({ children }: Props) {
             Shop
           </a>
           <div className="navbar-item has-dropdown is-hoverable">
-            <p id="red" className="navbar-link">
-              Cotologue
-            </p>
+            <p className="navbar-link">Cotologue</p>
             <div className="navbar-dropdown">
               <a className="navbar-item" href="/shop/weights">
                 Weights
@@ -84,8 +86,20 @@ function Header({ children }: Props) {
         </div>
 
         <div className="navbar-end">
-          <div className="navbar-item">
-            <div className="buttons">{children}</div>
+          <div className="navbar-item has-dropdown is-hoverable">
+            <p className="navbar-link" style={{ paddingRight: 20 }}>
+              <button className="navbar-burger" aria-expanded={false}>
+                <span aria-hidden={true}></span>
+                <span aria-hidden={true}></span>
+                <span aria-hidden={true}></span>
+              </button>
+            </p>
+            <div className="navbar-dropdown is-right">
+              <NavbarLink text="Basket" href="/basket" img={basket} />
+              <NavbarLink text="Orders" href="/orders" img={order} />
+              <NavbarLink text="Help" href="/help" img={help} />
+              {children}
+            </div>
           </div>
         </div>
       </div>

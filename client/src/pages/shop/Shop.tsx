@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Spinner from "../../components/spinner/Spinner";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
-import RedBtn from "../../components/buttons/RedBtn";
 import ItemsHorizontal from "./lists/ItemsHorizontal";
 import "./shop.style.scss";
 import useFetch from "../../hooks/useFetch";
@@ -10,6 +9,8 @@ import { Item } from "../../models/models";
 import ItemsGrid from "./lists/ItemsGrid";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Pagination from "../../components/pagination/Pagination";
+import NavbarLink from "../../components/header/navbar-link/NavbarLink";
+import logout from "../../assets/logout.svg"
 
 function Shop() {
   const data: Item[] = useFetch("");
@@ -34,7 +35,7 @@ function Shop() {
   return (
     <>
       <Header>
-        <RedBtn text="Logout" href="/logout" />
+        <NavbarLink text="Logout" href="/logout" img={logout} />
       </Header>
       {window.location.pathname === "/shop/all" ? (
         <div
