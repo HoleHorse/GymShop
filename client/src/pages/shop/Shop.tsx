@@ -18,7 +18,7 @@ function Shop() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 250);
   }, []);
   if (loading) {
     return (

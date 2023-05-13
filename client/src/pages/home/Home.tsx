@@ -50,50 +50,37 @@ function Home() {
         </div>
       </div>
       <div className="container is-fluid">
-        <div
-          className="columns is-centered is-multiline center"
-          style={{ margin: 0 }}
-        >
-          <div className="column">
+        <div className="center section">
+          <div className="w50">
             <p className="section-header">Lead healthy lifestyle</p>
             <p className="section-text">
               Become happier and fitter with GymShop
             </p>
           </div>
-          <div className="column">
-            <img src={smile} alt="img" style={{ minWidth: 300 }} />
+          <div className="w50">
+            <img src={smile} alt="img" />
           </div>
         </div>
       </div>
       <div className="container is-fluid">
-        <div
-          className="columns is-centered is-multiline center"
-          style={{ margin: 0 }}
-        >
-          <div className="column swap1">
-            <img src={collage} alt="img" style={{ minWidth: 300 }} />
+        <div className="center section-2">
+          <div className="w50">
+            <p className="section-header">Power Up Your Gear</p>
+            <p className="section-text">Buy versatile Equipment at our store</p>
           </div>
-          <div className="column swap2">
-            <p className="section-header">Upgrade your gear</p>
-            <p className="section-text">
-              Have more versatility with more equipment
-            </p>
+          <div className="w50">
+            <img src={collage} alt="img" />
           </div>
         </div>
       </div>
       <div className="container is-fluid">
-        <div
-          className="columns is-centered is-multiline center"
-          style={{ margin: 0 }}
-        >
-          <div className="column">
-            <p className="section-header">Fuel Your Strength</p>
-            <p className="section-text">
-              Unlock Your Potential with Gym Supplements
-            </p>
+        <div className="center section">
+          <div className="w50">
+            <p className="section-header">Unleash Your Potential</p>
+            <p className="section-text">Achieve better results with supplements</p>
           </div>
-          <div className="column">
-            <img src={supplements} alt="img" style={{ minWidth: 300 }} />
+          <div className="w50">
+            <img src={supplements} alt="img" />
           </div>
         </div>
       </div>

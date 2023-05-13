@@ -9,35 +9,6 @@
     color: white;
     font-size: 32px;
   }
-  .card {
-    border-radius: 0;
-    color: white;
-    z-index: 1;
-  }
-  .card-content {
-    border-radius: 0;
-    background-color: #2a2a2a;
-    padding: 8% 8%;
-  }
-  .card-text {
-    white-space: nowrap;
-    font-size: 4.75vw;
-  }
-  @media screen and (min-width: 769px) {
-    .card-text {
-      font-size: 3vw;
-    }
-  }
-  @media screen and (min-width: 1024px) {
-    .card-text {
-      font-size: 1.65vw;
-    }
-  }
-  @media screen and (min-width: 1440px) {
-    .card-text {
-      font-size: 1.25vw;
-    }
-  }
   @media screen and (max-width: 768px) {
     .section-title {
       font-size: 24px;
