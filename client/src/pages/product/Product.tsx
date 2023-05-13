@@ -16,7 +16,7 @@ function Product() {
     if (item.id === -1) {
       navigate(-1);
     }
-  }, []);
+  }, [item.id, navigate]);
 
   return (
     <>

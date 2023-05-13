@@ -6,7 +6,7 @@ function Pagination() {
       className="pagination"
       role="navigation"
       aria-label="pagination"
-      style={{ paddingLeft: 20, paddingRight: 32 }}
+      style={{ paddingLeft: 26, paddingRight: 26 }}
     >
       <a className="pagination-previous">Previous</a>
       <a className="pagination-next">Next page</a>

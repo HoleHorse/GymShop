@@ -6,7 +6,7 @@ interface ItemState {
 }
 
 const initialState: ItemState = {
-  item: new Item(-1, "", "", 0, 0, [], []),
+  item: new Item(-1, "", [], 0, 0, [], []),
 };
 
 export const itemSlice = createSlice({
