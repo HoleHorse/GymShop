@@ -1,9 +1,9 @@
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import { SetStateAction, useState } from "react";
-import Input from "../../components/input/Input";
+import Input from "../../components/UI/input/Input";
 import "./auth.style.scss";
-import RedBtn from "../../components/buttons/RedBtn";
+import RedBtn from "../../components/UI/buttons/RedBtn";
 
 function Login() {
   const [password, setPassword] = useState("");

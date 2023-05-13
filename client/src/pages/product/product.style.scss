@@ -4,6 +4,17 @@
   width: 70%;
   margin-left: 15%;
   margin-right: 15%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  .item-info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1%;
+    color: white;
+    font-size: 26px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -12,6 +23,17 @@
     margin: 0px 0px;
   }
 }
+
+@media screen and (max-width: 499px) {
+  .product-container {
+    flex-direction: column;
+    .item-info {
+      position: relative;
+      margin-left: 0px;
+    }
+  }
+}
+
 
 .carousel {
   .control-dots {

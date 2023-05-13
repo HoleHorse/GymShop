@@ -1,9 +1,9 @@
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import { SetStateAction, useState } from "react";
-import Input from "../../components/input/Input";
+import Input from "../../components/UI/input/Input";
 import "./auth.style.scss";
-import RedBtn from "../../components/buttons/RedBtn";
+import RedBtn from "../../components/UI/buttons/RedBtn";
 
 function Register() {
   const [password, setPassword] = useState("");
@@ -50,7 +50,7 @@ function Register() {
                     placeholder="Password"
                   />
                 </div>
-                <RedBtn text="Sign Up" href="/"/>
+                <RedBtn text="Sign Up" href="/" />
                 <p className="has-text-left mt-5">
                   ALready have an account? <a href="/login">Sign in!</a>
                 </p>

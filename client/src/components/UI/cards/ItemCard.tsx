@@ -1,19 +1,15 @@
-import { ItemProp } from "../../models/models";
+import { ItemProp } from "../../../models/models";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../../hooks/redux";
-import { setItem } from "../../slices/itemSlice";
 import "./itemcard.style.scss";
 
 function ItemCard({ item }: ItemProp) {
   const navigate = useNavigate();
-  const dispatch = useAppDispatch();
   return (
     <div
       className="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile"
-      style={{padding: 0}}
+      style={{ padding: 0 }}
       onClick={() => {
-        dispatch(setItem(item));
-        navigate("/product");
+        navigate("/product", { state: { item: item } });
       }}
     >
       <div className="card item-card">

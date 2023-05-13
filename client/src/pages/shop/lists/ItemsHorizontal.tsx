@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import leftArrow from "../../../assets/left-arrow.svg";
 import rightArrow from "../../../assets/right-arrow.svg";
-import ItemCard from "../../../components/cards/ItemCard";
+import ItemCard from "../../../components/UI/cards/ItemCard";
 import { Item } from "../../../models/models";
 
 type Props = {
@@ -56,7 +56,7 @@ function PopularProducts({ title, data }: Props) {
           ref={listRef}
           style={{ borderBottom: "none" }}
         >
-          <div className="columns" style={{ marginLeft: 12, width: 80+"%" }}>
+          <div className="columns" style={{ marginLeft: 12, width: 80 + "%" }}>
             {data.map((item) => {
               return <ItemCard item={item} key={item.id} />;
             })}

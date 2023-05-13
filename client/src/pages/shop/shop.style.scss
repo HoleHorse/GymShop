@@ -50,18 +50,23 @@
   transform: translateY(-45%);
   background-color: #0f0f0f;
   padding: 1% 0%;
+  opacity: 0.6;
+}
+
+.arrow:hover {
+  opacity: 1;
 }
 
 .arrow-left {
   left: 0;
-  z-index: 5;
+  z-index: 4;
   width: 32px;
-  margin: 0px 0.5%
+  margin: 0px 0.5%;
 }
 
 .arrow-right {
   right: 0;
-  z-index: 5;
+  z-index: 4;
   width: 32px;
   margin: 0px 0.5%
 }

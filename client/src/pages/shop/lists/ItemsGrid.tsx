@@ -1,4 +1,4 @@
-import ItemCard from "../../../components/cards/ItemCard";
+import ItemCard from "../../../components/UI/cards/ItemCard";
 import { Item } from "../../../models/models";
 
 type Props = {

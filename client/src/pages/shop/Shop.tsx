@@ -1,20 +1,23 @@
 import { useState, useEffect } from "react";
-import Spinner from "../../components/spinner/Spinner";
+import Spinner from "../../components/UI/spinner/Spinner";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import ItemsHorizontal from "./lists/ItemsHorizontal";
 import "./shop.style.scss";
-import useFetch from "../../hooks/useFetch";
-import { Item } from "../../models/models";
+import FetchItems from "../../hooks/FetchItems";
 import ItemsGrid from "./lists/ItemsGrid";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Pagination from "../../components/pagination/Pagination";
 import NavbarLink from "../../components/header/navbar-link/NavbarLink";
+import { useAppSelector } from "../../hooks/redux";
+import { RootState } from "../../store";
+import { Item } from "../../models/models";
 import logout from "../../assets/logout.svg"
 
 function Shop() {
-  const data: Item[] = useFetch("");
   const [loading, setLoading] = useState(true);
+  FetchItems();
+  const data: Item[] = useAppSelector((state: RootState) => state.items.items);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -44,7 +47,13 @@ function Shop() {
         >
           <div style={{ display: "flex", width: 100 + "%" }}>
             <Sidebar />
-            <div style={{ display: "flex", width: 100+"%", flexDirection: "column" }}>
+            <div
+              style={{
+                display: "flex",
+                width: 100 + "%",
+                flexDirection: "column",
+              }}
+            >
               <Pagination />
               <ItemsGrid data={data} />
             </div>

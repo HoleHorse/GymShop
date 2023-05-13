@@ -1,4 +1,4 @@
-import RedBtn from "../../components/buttons/RedBtn";
+import RedBtn from "../../components/UI/buttons/RedBtn";
 import Header from "../../components/header/Header";
 import smile from "../../assets/smile.jpg";
 import supplements from "../../assets/supplements.jpg";
@@ -7,7 +7,7 @@ import "./home.style.scss";
 import Question from "./faq/Question";
 import Footer from "../../components/footer/Footer";
 import { SetStateAction, useState } from "react";
-import Input from "../../components/input/Input";
+import Input from "../../components/UI/input/Input";
 import logout from "../../assets/logout.svg";
 import NavbarLink from "../../components/header/navbar-link/NavbarLink";
 
@@ -77,7 +77,9 @@ function Home() {
         <div className="center section">
           <div className="w50">
             <p className="section-header">Unleash Your Potential</p>
-            <p className="section-text">Achieve better results with supplements</p>
+            <p className="section-text">
+              Achieve better results with supplements
+            </p>
           </div>
           <div className="w50">
             <img src={supplements} alt="img" />
