@@ -12,17 +12,20 @@ import NavbarLink from "../../components/header/navbar-link/NavbarLink";
 import { useAppSelector } from "../../hooks/redux";
 import { RootState } from "../../store";
 import { Item } from "../../models/models";
-import logout from "../../assets/logout.svg"
+import logout from "../../assets/logout.svg";
 
 function Shop() {
   const [loading, setLoading] = useState(true);
+
   FetchItems();
   const data: Item[] = useAppSelector((state: RootState) => state.items.items);
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 250);
   }, []);
+
   if (loading) {
     return (
       <div style={{ backgroundColor: "#0f0f0f" }}>
@@ -65,7 +68,6 @@ function Shop() {
           <ItemsHorizontal data={data} title="New products" />
         </>
       )}
-
       <Footer />
     </>
   );

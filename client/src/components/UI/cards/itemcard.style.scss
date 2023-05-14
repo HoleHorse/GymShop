@@ -12,6 +12,8 @@
 .card-image:first-child img {
   border-top-left-radius: 0rem;
   border-top-right-radius: 0rem;
+  object-fit: contain;
+  background-color: white;
 }
 
 .card {

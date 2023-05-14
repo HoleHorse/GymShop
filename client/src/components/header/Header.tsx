@@ -60,7 +60,7 @@ function Header({ children }: Props) {
           <a id="red" href="/" className="navbar-item">
             Home
           </a>
-          <a id="red" href="#faq" className="navbar-item">
+          <a id="red" href="/#faq" className="navbar-item">
             FAQ
           </a>
           <a id="red" href="/shop" className="navbar-item">

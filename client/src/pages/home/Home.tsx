@@ -13,11 +13,13 @@ import NavbarLink from "../../components/header/navbar-link/NavbarLink";
 
 function Home() {
   const [email, setEmail] = useState("");
+
   const onEmailChange = (event: {
     target: { value: SetStateAction<string> };
   }) => {
     setEmail(event.target.value);
   };
+
   return (
     <>
       <Header>
