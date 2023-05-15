@@ -22,19 +22,21 @@
       }
     }
     .buttons {
-      position: absolute;
-      bottom: 0px;
+      margin-top: 20px;
     }
   }
 }
 
 .image-container {
-  align-items: flex-start;
   min-width: 200px;
   min-height: 300px;
+  max-height: 500px;
+  max-width: 500px;
   background-color: black;
   display: flex;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-wrapper {
@@ -47,10 +49,6 @@
   opacity: 1;
   transition: opacity 0.5s ease;
   padding: 0px 0.5px;
-}
-
-.square-image.active {
-  opacity: 1;
 }
 
 .tabs {

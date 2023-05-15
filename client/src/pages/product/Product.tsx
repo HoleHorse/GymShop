@@ -109,9 +109,7 @@ function Product() {
                 {item.imgs.map((_: string, i: number) => (
                   <img
                     key={i}
-                    className={`square-image ${
-                      current[i] === 1 ? "active" : ""
-                    }`}
+                    className="square-image"
                     alt="img"
                     src={item.imgs[i]}
                   />

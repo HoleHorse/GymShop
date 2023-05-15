@@ -104,7 +104,8 @@ const data = [
   },
   {
     id: 7,
-    title: "Title",
+    title:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id massa semper, accumsan enim quis, eleifend nunc. Mauris maximus leo a laoreet lobortis. Sed a laoreet lacus, ut aliquet nisl.",
     imgs: [
       "https://media.gq.com/photos/62d6d6f291f8f44bbcc9d235/4:3/w_1500,h_1125,c_limit/protein-art.jpg",
     ],
