@@ -4,6 +4,7 @@ export class Item {
   constructor(
     public id: number,
     public title: string,
+    public name: string,
     public imgs: string[],
     public price: number,
     public description: string,

@@ -60,7 +60,7 @@ function Product() {
     setCurrent(clickDot(current.indexOf(1) + dir));
   };
 
-  const [active, setActive] = useState<number>(0);
+  const [active, setActive] = useState<number>(1);
   const [current, setCurrent] = useState<number[]>(clickDot(0));
 
   return (
@@ -123,9 +123,11 @@ function Product() {
               <StarRating rating={5} />
               <h3>({item.reviews} Reviews)</h3>
             </div>
-            <h1>{item.title}</h1>
-            <h1>{item.price} KZT</h1>
-            <h1>Availability ({item.availability})</h1>
+            <h1>{item.name}</h1>
+            <h1 style={{ marginTop: 10 }}>{item.price} KZT</h1>
+            <h1 style={{ marginTop: 10 }}>
+              Availability ({item.availability})
+            </h1>
             <div className="buttons">
               <RedBtn text="Buy" href="/buy" />
               <RedBtn text="Add to Cart" href="/add-to-cart" />
@@ -136,6 +138,14 @@ function Product() {
           <div className="tabs is-large" style={{ marginBottom: 0 }}>
             <ul>
               <li
+                className={active === 1 ? "is-active" : ""}
+                onClick={() => {
+                  setActive(1);
+                }}
+              >
+                <a>Details</a>
+              </li>
+              <li
                 className={active === 0 ? "is-active" : ""}
                 onClick={() => {
                   setActive(0);
@@ -144,12 +154,12 @@ function Product() {
                 <a>Description</a>
               </li>
               <li
-                className={active === 1 ? "is-active" : ""}
+                className={active === 2 ? "is-active" : ""}
                 onClick={() => {
-                  setActive(1);
+                  setActive(2);
                 }}
               >
-                <a>Details</a>
+                <a>Reviews</a>
               </li>
             </ul>
           </div>
@@ -167,6 +177,7 @@ function Product() {
               return <li>{d}</li>;
             })}
           </ul>
+          <div style={{ display: active === 2 ? "block" : "none" }}></div>
         </div>
       </div>
       <Footer />
