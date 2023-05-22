@@ -51,7 +51,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="container is-fluid">
+      <div className="container is-fluid" style={{borderBottom: "#2b2b2b solid 10px"}}>
         <div className="center section">
           <div className="w50">
             <p className="section-header">Lead healthy lifestyle</p>
@@ -64,7 +64,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="container is-fluid">
+      <div className="container is-fluid" style={{borderBottom: "#2b2b2b solid 10px"}}>
         <div className="center section-2">
           <div className="w50">
             <p className="section-header">Power Up Your Gear</p>
@@ -75,7 +75,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="container is-fluid">
+      <div className="container is-fluid" style={{borderBottom: "#2b2b2b solid 10px"}}>
         <div className="center section">
           <div className="w50">
             <p className="section-header">Unleash Your Potential</p>
