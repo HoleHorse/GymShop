@@ -5,8 +5,9 @@ import NavbarLink from "../../components/header/navbar-link/NavbarLink";
 import logout from "../../assets/logout.svg";
 import Footer from "../../components/footer/Footer";
 import "./product.style.scss";
-import StarRating from "../../components/star-rating/StarRating";
+import StarRating from "../../components/UI/star-rating/StarRating";
 import RedBtn from "../../components/UI/buttons/RedBtn";
+import Review from "./review/Review";
 
 function Product() {
   const navigate = useNavigate();
@@ -120,7 +121,7 @@ function Product() {
 
           <div className="item-info">
             <div className="rating-block">
-              <StarRating rating={5} />
+              <StarRating rating={5} name="product-rating" mode="controlled" />
               <h3>({item.reviews} Reviews)</h3>
             </div>
             <h1>{item.name}</h1>
@@ -173,11 +174,13 @@ function Product() {
             style={{ display: active === 1 ? "block" : "none" }}
             className="tab-text"
           >
-            {item.details.map((d: string) => {
-              return <li>{d}</li>;
+            {item.details.map((d: string, i: number) => {
+              return <li key={i}>{d}</li>;
             })}
           </ul>
-          <div style={{ display: active === 2 ? "block" : "none" }}></div>
+          <div style={{ display: active === 2 ? "block" : "none" }}>
+            <Review review={review} />
+          </div>
         </div>
       </div>
       <Footer />
@@ -186,6 +189,14 @@ function Product() {
 }
 
 export default Product;
+
+const review = {
+  author: "Name of author",
+  date: "20-05-2023",
+  content:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor quis ante eu placerat. In interdum maximus tellus, sit amet tristique arcu iaculis eget. In nisl nisi, cursus at erat et, condimentum viverra sem. Phasellus non tincidunt leo. Suspendisse a aliquam velit, non maximus nunc. Proin placerat ex at est dapibus, at dictum ante sollicitudin. Donec aliquam scelerisque urna et ultrices.",
+  rating: 4.7,
+};
 
 const empty = {
   item: {

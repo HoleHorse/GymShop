@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "bulma/css/bulma.min.css";
 import "./index.scss";
 import App from "./App";
-import store, { persistor } from "./store";
+import store, { persistor } from "./store/store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 

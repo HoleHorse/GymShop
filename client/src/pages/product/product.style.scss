@@ -79,6 +79,10 @@
     margin: 0px 0px;
     .item-info {
       width: 100%;
+      font-size: 23px;
+    }
+    .review {
+      font-size: 18px;
     }
   }
 }
@@ -86,6 +90,9 @@
 @media screen and (max-width: 499px) {
   .product-container {
     flex-direction: column;
+    .review {
+      font-size: 16px;
+    }
   }
 }
 
@@ -148,4 +155,12 @@
       background-color: #db202c;
     }
   }
+}
+
+.review {
+  width: 100 + "%";
+  color: white;
+  padding: 12px 24px;
+  font-family: "book";
+  font-size: 20px;
 }

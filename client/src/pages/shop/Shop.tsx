@@ -10,7 +10,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Pagination from "../../components/pagination/Pagination";
 import NavbarLink from "../../components/header/navbar-link/NavbarLink";
 import { useAppSelector } from "../../hooks/redux";
-import { RootState } from "../../store";
+import { RootState } from "../../store/store";
 import { Item } from "../../models/models";
 import logout from "../../assets/logout.svg";
 

@@ -1,5 +1,5 @@
 import { useAppDispatch } from "./redux";
-import { setItems } from "../slices/itemsSlice";
+import { setItems } from "../store/itemsSlice";
 
 const data = [
   {

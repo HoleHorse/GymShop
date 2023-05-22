@@ -3,10 +3,12 @@ import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 
 type Props = {
-    rating: number;
+  rating: number;
+  name: string;
+  mode: string;
 }
 
-function StarRating({rating}: Props) {
+function StarRating({rating, name, mode}: Props) {
   const [value, setValue] = React.useState<number | null>(rating);
 
   return (
@@ -22,8 +24,10 @@ function StarRating({rating}: Props) {
       }}
     >
       <Rating
-        name="simple-controlled"
+        name={name}
         value={value}
+        readOnly={mode === "read-only"}
+        precision={0.1}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
