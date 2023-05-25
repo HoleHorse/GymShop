@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import leftArrow from "../../../assets/left-arrow.svg";
 import rightArrow from "../../../assets/right-arrow.svg";
 import ItemCard from "../../../components/UI/cards/ItemCard";
-import { Item } from "../../../models/models";
+import { Item } from "../../../models/item";
 
 type Props = {
   data: Item[];

@@ -130,8 +130,18 @@ function Product() {
               Availability ({item.availability})
             </h1>
             <div className="buttons">
-              <RedBtn text="Buy" href="/buy" />
-              <RedBtn text="Add to Cart" href="/add-to-cart" />
+              <RedBtn
+                text="Buy"
+                onClick={() => {
+                  navigate("/buy");
+                }}
+              />
+              <RedBtn
+                text="Add to Cart"
+                onClick={() => {
+                  navigate("/add-to-cart");
+                }}
+              />
             </div>
           </div>
         </div>

@@ -10,9 +10,11 @@ import { SetStateAction, useState } from "react";
 import Input from "../../components/UI/input/Input";
 import logout from "../../assets/logout.svg";
 import NavbarLink from "../../components/header/navbar-link/NavbarLink";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
   const onEmailChange = (event: {
     target: { value: SetStateAction<string> };
@@ -45,13 +47,21 @@ function Home() {
                 />
               </div>
               <div className="column is-narrow">
-                <RedBtn text="Get Started" href="/register" />
+                <RedBtn
+                  text="Get Started"
+                  onClick={() => {
+                    navigate("/register");
+                  }}
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="container is-fluid" style={{borderBottom: "#2b2b2b solid 10px"}}>
+      <div
+        className="container is-fluid"
+        style={{ borderBottom: "#2b2b2b solid 10px" }}
+      >
         <div className="center section">
           <div className="w50">
             <p className="section-header">Lead healthy lifestyle</p>
@@ -64,7 +74,10 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="container is-fluid" style={{borderBottom: "#2b2b2b solid 10px"}}>
+      <div
+        className="container is-fluid"
+        style={{ borderBottom: "#2b2b2b solid 10px" }}
+      >
         <div className="center section-2">
           <div className="w50">
             <p className="section-header">Power Up Your Gear</p>
@@ -75,7 +88,10 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="container is-fluid" style={{borderBottom: "#2b2b2b solid 10px"}}>
+      <div
+        className="container is-fluid"
+        style={{ borderBottom: "#2b2b2b solid 10px" }}
+      >
         <div className="center section">
           <div className="w50">
             <p className="section-header">Unleash Your Potential</p>

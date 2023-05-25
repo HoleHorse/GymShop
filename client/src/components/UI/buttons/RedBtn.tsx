@@ -1,15 +1,20 @@
+import { MouseEventHandler } from "react";
 import "./btn.style.scss";
 
 interface BtnProps {
   text: string;
-  href: string;
+  onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-function LoginBtn({ text, href }: BtnProps) {
+function LoginBtn({ text, onClick }: BtnProps) {
   return (
-    <a className="button is-danger" href={href} style={{ fontSize: 20 }}>
+    <button
+      className="button is-danger"
+      onClick={onClick}
+      style={{ fontSize: 20 }}
+    >
       {text}
-    </a>
+    </button>
   );
 }
 

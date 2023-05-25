@@ -1,5 +1,3 @@
-export interface Model {}
-
 export class Item {
   constructor(
     public id: number,

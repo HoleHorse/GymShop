@@ -4,11 +4,14 @@ import { SetStateAction, useState } from "react";
 import Input from "../../components/UI/input/Input";
 import "./auth.style.scss";
 import RedBtn from "../../components/UI/buttons/RedBtn";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [password, setPassword] = useState("");
-
   const [email, setEmail] = useState("");
+
+  const navigate = useNavigate();
+
   const onEmailChange = (event: {
     target: { value: SetStateAction<string> };
   }) => {
@@ -19,6 +22,24 @@ function Login() {
     target: { value: SetStateAction<string> };
   }) => {
     setPassword(event.target.value);
+  };
+
+  const handleSubmit = () => {
+    fetch("http://localhost:5000/auth/login", {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email: email, password: password }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.message === "Success") {
+          navigate("/shop");
+        } else {
+        }
+      });
   };
 
   return (
@@ -32,7 +53,7 @@ function Login() {
           <div className="field center">
             <div className="column is-narrow">
               <div className="auth-form box p-5">
-                <h1 className="has-text-white has-text-left is-size-1-desktop">
+                <h1 className="has-text-white has-text-left is-size-1-desktop is-size-3-tablet is-size-3-mobile">
                   Sign In
                 </h1>
                 <div className="mt-5">
@@ -51,7 +72,7 @@ function Login() {
                     placeholder="Password"
                   />
                 </div>
-                <RedBtn text="Sign In" href="/" />
+                <RedBtn text="Sign In" onClick={handleSubmit} />
                 <p className="has-text-left mt-5">
                   Do not have an account? <a href="/register">Sign up now!</a>
                 </p>

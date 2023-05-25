@@ -1,5 +1,5 @@
 import ItemCard from "../../../components/UI/cards/ItemCard";
-import { Item } from "../../../models/models";
+import { Item } from "../../../models/item";
 
 type Props = {
   data: Item[];

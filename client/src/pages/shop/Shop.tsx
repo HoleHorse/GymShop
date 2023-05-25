@@ -11,7 +11,7 @@ import Pagination from "../../components/pagination/Pagination";
 import NavbarLink from "../../components/header/navbar-link/NavbarLink";
 import { useAppSelector } from "../../hooks/redux";
 import { RootState } from "../../store/store";
-import { Item } from "../../models/models";
+import { Item } from "../../models/item";
 import logout from "../../assets/logout.svg";
 
 function Shop() {

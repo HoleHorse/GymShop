@@ -1,4 +1,4 @@
-import { ItemProp } from "../../../models/models";
+import { ItemProp } from "../../../models/item";
 import { useNavigate } from "react-router-dom";
 import "./itemcard.style.scss";
 
