@@ -1,6 +1,7 @@
 import express from "express";
 import { connect } from "mongoose";
 import dotenv from "dotenv";
+import bodyParser from "body-parser";
 import authRouter from "./routers/auth";
 
 dotenv.config();
@@ -8,7 +9,10 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use("/auth", authRouter);
+var jsonParser = bodyParser.json();
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+app.use("/auth", urlencodedParser, jsonParser, authRouter);
 
 async function run() {
   await connect(
