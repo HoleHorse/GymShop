@@ -2,6 +2,8 @@ import express from "express";
 import { connect } from "mongoose";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
+import cors from "cors";
 import authRouter from "./routers/auth";
 
 dotenv.config();
@@ -9,10 +11,18 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-var jsonParser = bodyParser.json();
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+const jsonParser = bodyParser.json();
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-app.use("/auth", urlencodedParser, jsonParser, authRouter);
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+app.use(urlencodedParser, jsonParser, cookieParser());
+app.use("/auth", authRouter);
 
 async function run() {
   await connect(

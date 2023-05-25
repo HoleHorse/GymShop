@@ -1,25 +1,30 @@
 import User, { authData } from "../models/user";
 import bcrypt from "bcrypt";
 
-export const Login = async (authData: authData): Promise<[number, string]> => {
+type Message = {
+  message: string;
+};
+
+export const Login = async (authData: authData): Promise<[number, Message]> => {
   try {
     const candidate = await User.findOne({ email: authData.email });
-    if (candidate) {
-      const compare = await bcrypt.compare(
-        candidate.password,
-        authData.password
-      );
+    if (!candidate) {
+      return [400, { message: "User not found" }];
     }
-    return [200, "Success"];
+    const compare = await bcrypt.compare(authData.password, candidate.password);
+    if (!compare) {
+      return [400, { message: "Incorrect password" }];
+    }
+    return [200, { message: "Success" }];
   } catch (e) {
     console.log(e);
-    return [500, "Error"];
+    return [500, { message: "Error" }];
   }
 };
 
 export const Register = async (
   authData: authData
-): Promise<[number, string]> => {
+): Promise<[number, Message]> => {
   try {
     const hashedPassword = await bcrypt.hash(authData.password, 8);
     const user = new User({
@@ -28,10 +33,10 @@ export const Register = async (
       password: hashedPassword,
     });
     await user.save();
-    return [200, "Success"];
+    return [200, { message: "Success" }];
   } catch (e) {
     console.log(e);
-    return [500, "Error"];
+    return [500, { message: "Error" }];
   }
 };
 
