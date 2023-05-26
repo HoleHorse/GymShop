@@ -4,7 +4,8 @@ import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import authRouter from "./routers/auth";
+import authRouter from "./routers/auth.router";
+import itemRouter from "./routers/item.router";
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use(
 );
 app.use(urlencodedParser, jsonParser, cookieParser());
 app.use("/auth", authRouter);
+app.use("/items", itemRouter);
 
 async function run() {
   await connect(

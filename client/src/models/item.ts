@@ -1,6 +1,6 @@
 export class Item {
   constructor(
-    public id: number,
+    public _id: string,
     public title: string,
     public name: string,
     public imgs: string[],
@@ -10,12 +10,13 @@ export class Item {
     public rating: number,
     public reviews: number,
     public comments: number[],
-    public details: string[]
+    public details: string[],
+    public sold: number
   ) {}
 }
 
 export class Comment {
-  constructor(id: number, author: string, comment: string) {}
+  constructor(_id: string, author: string, comment: string) {}
 }
 
 export type ItemProp = {

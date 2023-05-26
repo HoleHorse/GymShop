@@ -54,11 +54,11 @@ function PopularProducts({ title, data }: Props) {
         <div
           className="container-slider is-fluid"
           ref={listRef}
-          style={{ borderBottom: "none" }}
+          style={{ borderBottom: "none", scrollBehavior: "smooth" }}
         >
           <div className="columns" style={{ marginLeft: 12, width: 80 + "%" }}>
             {data.map((item) => {
-              return <ItemCard item={item} key={item.id} />;
+              return <ItemCard item={item} key={item._id} />;
             })}
           </div>
         </div>

@@ -31,12 +31,14 @@ function Login() {
       headers: {
         "Content-Type": "application/json",
       },
+      credentials: "include",
       body: JSON.stringify({ email: email, password: password }),
     })
       .then((res) => res.json())
       .then((res) => {
         if (res.message === "Success") {
           navigate("/shop");
+          let c = document.cookie;
         } else {
         }
       });
