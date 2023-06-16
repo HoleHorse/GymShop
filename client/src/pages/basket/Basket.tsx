@@ -1,14 +1,6 @@
-import Header from "../../components/header/Header";
-import NavbarLink from "../../components/header/navbar-link/NavbarLink";
-import Footer from "../../components/footer/Footer";
-import logout from "../../assets/logout.svg";
-
 function Basket() {
   return (
     <>
-      <Header>
-        <NavbarLink text="Log In" href="/logout" img={logout} />
-      </Header>
       <div
         className="container is-fluid"
         style={{
@@ -41,7 +33,6 @@ function Basket() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

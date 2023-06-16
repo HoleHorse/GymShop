@@ -1,9 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Header from "../../components/header/Header";
-import NavbarLink from "../../components/header/navbar-link/NavbarLink";
-import logout from "../../assets/logout.svg";
-import Footer from "../../components/footer/Footer";
 import "./product.style.scss";
 import StarRating from "../../components/UI/star-rating/StarRating";
 import RedBtn from "../../components/UI/buttons/RedBtn";
@@ -66,9 +62,6 @@ function Product() {
 
   return (
     <>
-      <Header>
-        <NavbarLink text="Logout" href="/logout" img={logout} />
-      </Header>
       <div
         className="container is-fluid"
         style={{ padding: 0, borderBottom: "none" }}
@@ -193,7 +186,6 @@ function Product() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

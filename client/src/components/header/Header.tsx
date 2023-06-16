@@ -1,15 +1,12 @@
-import { ReactNode, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./header.style.scss";
 import basket from "../../assets/basket.svg";
 import order from "../../assets/order.svg";
 import help from "../../assets/help.svg";
 import NavbarLink from "./navbar-link/NavbarLink";
+import logout from "../../assets/logout.svg";
 
-interface Props {
-  children?: ReactNode;
-}
-
-function Header({ children }: Props) {
+function Header() {
   const [isActive, setIsActive] = useState("");
   function handleWindowResize() {
     if (window.innerWidth >= 1024) {
@@ -98,7 +95,7 @@ function Header({ children }: Props) {
               <NavbarLink text="Basket" href="/basket" img={basket} />
               <NavbarLink text="Orders" href="/orders" img={order} />
               <NavbarLink text="Help" href="/help" img={help} />
-              {children}
+              <NavbarLink text="Login" href="/login" img={logout} />
             </div>
           </div>
         </div>

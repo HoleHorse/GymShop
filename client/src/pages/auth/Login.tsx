@@ -1,5 +1,3 @@
-import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
 import { SetStateAction, useState } from "react";
 import Input from "../../components/UI/input/Input";
 import "./auth.style.scss";
@@ -41,7 +39,6 @@ function Login() {
 
   return (
     <>
-      <Header></Header>
       <div
         className="background-container center"
         style={{ padding: 4 + "%", paddingBottom: 10 + "%" }}
@@ -78,7 +75,6 @@ function Login() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

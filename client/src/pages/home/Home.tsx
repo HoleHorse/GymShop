@@ -1,15 +1,11 @@
 import RedBtn from "../../components/UI/buttons/RedBtn";
-import Header from "../../components/header/Header";
 import smile from "../../assets/smile.jpg";
 import supplements from "../../assets/supplements.jpg";
 import collage from "../../assets/gym-collage.png";
 import "./home.style.scss";
 import Question from "./faq/Question";
-import Footer from "../../components/footer/Footer";
 import { SetStateAction, useState } from "react";
 import Input from "../../components/UI/input/Input";
-import logout from "../../assets/logout.svg";
-import NavbarLink from "../../components/header/navbar-link/NavbarLink";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -24,9 +20,6 @@ function Home() {
 
   return (
     <>
-      <Header>
-        <NavbarLink text="Log In" href="/login" img={logout} />
-      </Header>
       <div className="background-container" style={{ padding: 12 + "%" }}>
         <div className="main-content">
           <div className="columns">
@@ -135,7 +128,6 @@ function Home() {
           answer="Yes, all our gym equipment comes with warranties. The duration and coverage may vary depending on the specific product. Please check the product details or contact our customer service for more information."
         />
       </div>
-      <Footer />
     </>
   );
 }
