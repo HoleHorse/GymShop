@@ -3,7 +3,6 @@ import { setItems } from "../store/itemsSlice";
 import { useEffect, useState } from "react";
 
 function useFetchItems() {
-  const [data, setData] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   const dispatch = useAppDispatch();
@@ -18,18 +17,15 @@ function useFetchItems() {
     })
       .then((res) => res.json())
       .then((data) => {
-        setData(data);
-        console.log(data);
+        dispatch(setItems(data));
       })
-      .catch((e) => {
+      .catch(() => {
         setError("Our service is currently unavailable");
       })
       .finally(() => {
         setLoading(false);
       });
   }, []);
-
-  dispatch(setItems(data));
 
   return { error, loading };
 }

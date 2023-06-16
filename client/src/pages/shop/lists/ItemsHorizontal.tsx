@@ -40,14 +40,14 @@ function PopularProducts({ title, data }: Props) {
             className="arrow arrow-left"
             src={leftArrow}
             alt="Left Arrow"
-            onClick={() => scrollTo(-500)}
+            onClick={() => scrollTo(-450)}
             style={{ display: seeArrows }}
           />
           <img
             className="arrow arrow-right"
             src={rightArrow}
             alt="Right Arrow"
-            onClick={() => scrollTo(+500)}
+            onClick={() => scrollTo(+450)}
             style={{ display: seeArrows }}
           />
         </div>

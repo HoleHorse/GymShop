@@ -35,11 +35,14 @@ export const Register = async (
     await user.save();
     return [200, { message: "Success" }];
   } catch (e) {
-    console.log(e);
     return [500, { message: "Error" }];
   }
 };
 
-export const Logout = async () => {
-  return "logout";
+export const Logout = async (): Promise<[number, Message]> => {
+  try {
+    return [200, { message: "Success" }];
+  } catch (e) {
+    return [500, { message: "Error" }];
+  }
 };
