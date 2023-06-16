@@ -1,16 +1,16 @@
 import express from "express";
 import { connect } from "mongoose";
-import dotenv from "dotenv";
+import { config } from "dotenv";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import authRouter from "./routers/auth.router";
 import itemRouter from "./routers/item.router";
 
-dotenv.config();
+config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT;
 
 const jsonParser = bodyParser.json();
 const urlencodedParser = bodyParser.urlencoded({ extended: false });

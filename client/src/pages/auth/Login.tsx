@@ -5,13 +5,10 @@ import Input from "../../components/UI/input/Input";
 import "./auth.style.scss";
 import RedBtn from "../../components/UI/buttons/RedBtn";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../../hooks/redux";
-import { setUser } from "../../store/userSlice";
 
 function Login() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   const onEmailChange = (event: {
@@ -35,17 +32,11 @@ function Login() {
       },
       credentials: "include",
       body: JSON.stringify({ email: email, password: password }),
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        if (res.message === "Success") {
-          //dispatch(setUser())
-          let c = document.cookie;
-          console.log(c);
-          navigate("/shop");
-        } else {
-        }
-      });
+    }).then((res) => {
+      if (res.status === 200) {
+        navigate("/shop");
+      }
+    });
   };
 
   return (

@@ -92,6 +92,12 @@ $red: #db202c;
   }
 }
 
+.navbar-dropdown.is-right {
+  .navbar-item {
+    padding-left: 16px;
+  }
+}
+
 nav {
   font-size: 24px;
 }
