@@ -24,8 +24,11 @@ function useFetchItems() {
       })
       .finally(() => {
         setLoading(false);
+      })
+      .catch((e) => {
+        console.log(e);
       });
-  }, []);
+  }, [dispatch]);
 
   return { error, loading };
 }

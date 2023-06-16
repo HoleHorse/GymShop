@@ -1,6 +1,4 @@
 import Spinner from "../../components/UI/spinner/Spinner";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
 import ItemsHorizontal from "./lists/ItemsHorizontal";
 import "./shop.style.scss";
 import useFetchItems from "../../hooks/useFetchItems";

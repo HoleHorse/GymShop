@@ -8,6 +8,7 @@ import logout from "../../assets/logout.svg";
 
 function Header() {
   const [isActive, setIsActive] = useState("");
+  
   function handleWindowResize() {
     if (window.innerWidth >= 1024) {
       setIsActive("");
