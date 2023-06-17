@@ -20,7 +20,7 @@ function Question({ question, answer }: question) {
     }
   }
   return (
-    <div className="column is-half is-offset-one-quarter">
+    <div className="column">
       <article className="message has-text-left is-dark">
         <div className="message-header" onClick={handleClick}>
           <p>{question}</p>

@@ -1,17 +1,26 @@
+html {
+  background-color: #0f0f0f;
+}
+
+body {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main-content {
   position: relative;
   z-index: 1;
 }
 
 .main-text {
-  font-size: calc(25px + 2vw);
+  font-size: 48px;
   color: white;
   text-align: center;
   padding-left: 12px;
 }
 
 .container {
-  background-color: #0f0f0f;
   margin: 0px 0px;
 }
 
@@ -32,14 +41,20 @@
 }
 
 .section-header {
-  font-size: calc(4 * 1vw);
+  font-size: 48px;
   color: white;
   white-space: nowrap;
 }
 
 .section-text {
-  font-size: calc(2.5 * 1vw);
+  font-size: 32px;
   color: rgb(131, 131, 131);
+}
+
+#faq {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .message {
@@ -63,6 +78,19 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .message {
+    .message-header {
+      p {
+        font-size: 20px;
+      }
+    }
+    .message-body {
+      font-size: 18px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .section {
     flex-direction: column;
@@ -74,19 +102,34 @@
     width: 100%;
   }
   .section-header {
-    font-size: calc(3 * 1.2vh);
+    font-size: 36px;
   }
   .section-text {
-    font-size: calc(2 * 1.2vh);
+    font-size: 28px;
+  }
+  .main-text {
+    font-size: 32px;
+  }
+  #faq {
+    width: 95%;
   }
   .message {
     .message-header {
       p {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
     .message-body {
-      font-size: 18px;
+      font-size: 16px;
     }
+  }
+}
+
+@media (max-width: 500px) {
+  .section-header {
+    font-size: 24px;
+  }
+  .section-text {
+    font-size: 16px;
   }
 }

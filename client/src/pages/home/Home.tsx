@@ -97,11 +97,13 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="container is-fluid" style={{ paddingBottom: 24 }}>
+      <div
+        id="faq"
+        className="container is-fluid"
+        style={{ paddingBottom: 24 }}
+      >
         <div className="column">
-          <p id="faq" className="main-text mt-5">
-            Frequently Asked Questions
-          </p>
+          <p className="main-text mt-5">Frequently Asked Questions</p>
         </div>
         <Question
           question="What is GymShop?"
