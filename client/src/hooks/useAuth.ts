@@ -3,7 +3,6 @@ function useAuth(): boolean {
     .split("; ")
     .find((cookie) => cookie.startsWith("auth="))
     ?.split("=")[1];
-    console.log(isAuth);
   return Boolean(isAuth);
 }
 

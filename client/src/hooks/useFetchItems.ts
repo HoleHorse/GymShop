@@ -8,26 +8,40 @@ function useFetchItems() {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    fetch("http://localhost:5000/items", {
-      method: "GET",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        dispatch(setItems(data));
+    const updateCookie = document.cookie
+      .split("; ")
+      .find((cookie) => cookie.startsWith("update_items="))
+      ?.split("=")[1];
+
+    const shouldFetchItems =
+      updateCookie === undefined || updateCookie === "true";
+
+    if (shouldFetchItems) {
+      fetch("http://localhost:5000/items", {
+        method: "GET",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
       })
-      .catch(() => {
-        setError("Our service is currently unavailable");
-      })
-      .finally(() => {
-        setLoading(false);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+        .then((res) => res.json())
+        .then((data) => {
+          dispatch(setItems(data));
+          document.cookie = "update_items=false; max-age=10800";
+        })
+        .catch(() => {
+          setError("Our service is currently unavailable");
+        })
+        .finally(() => {
+          setLoading(false);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    } else {
+      setLoading(false);
+    }
   }, [dispatch]);
 
   return { error, loading };
