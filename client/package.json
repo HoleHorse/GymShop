@@ -11,6 +11,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bulma": "^0.9.4",
+    "js-cookie": "^3.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
@@ -46,6 +47,7 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20.2.3",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
